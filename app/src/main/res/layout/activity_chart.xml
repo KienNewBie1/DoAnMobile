@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tổng thu -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biểu Đồ Thu Chi Cá Nhân"
+        android:textSize="28dp"
+        android:padding="8dp"
+        android:textColor="#4CAF50" />
+
+    <!-- Tổng chi -->
+
+    <!-- Số dư còn lại -->
+
+    <!-- Input danh mục -->
+<!--    <EditText-->
+<!--        android:id="@+id/etCategory"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Danh mục"-->
+<!--        android:padding="8dp" />-->
+
+<!--    &lt;!&ndash; Input số tiền &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/etAmount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Số tiền (âm cho chi tiêu)"-->
+<!--        android:padding="8dp"-->
+<!--        android:inputType="numberSigned|numberDecimal" />-->
+
+    <!-- Hàng nút điều khiển -->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="8dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAddExpense"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Thêm" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnCalculateIncome"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Tổng thu" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnCalculateExpense"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Tổng chi" />-->
+<!--    </LinearLayout>-->
+
+    <!-- Danh sách giao dịch -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp" />
+
+    <!-- Biểu đồ -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

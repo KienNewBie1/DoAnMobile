@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Logo hoặc Hình ảnh đại diện -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <!-- Lời chào cá nhân hóa -->
+    <TextView
+        android:id="@+id/tvWelcomeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Xin chào, Trung Kiên!"
+        android:textAlignment="center"
+        android:textColor="#37474F"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Nút điều hướng và cài đặt -->
+    <Button
+        android:id="@+id/btnDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="#64B5F6"
+        android:paddingVertical="12dp"
+        android:text="Xem chi tiết thu nhập"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="#FFCA28"
+        android:paddingVertical="12dp"
+        android:text="Cài đặt"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:backgroundTint="#EF5350"
+        android:paddingVertical="12dp"
+        android:text="Đăng xuất"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <!-- Khu vực thông tin thêm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Hiển thị thời gian hiện tại -->
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Thời gian hiện tại: 10:00 AM"
+            android:textColor="#546E7A"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <!-- Câu trích dẫn động lực -->
+        <TextView
+            android:id="@+id/tvMotivationalQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="“Hãy bắt đầu mỗi ngày với một mục tiêu lớn!”"
+            android:textColor="#78909C"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <!-- Thông tin liên hệ -->
+        <TextView
+            android:id="@+id/tvContactInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Liên hệ: trungkien98744@gmail.com | 0869053045"
+            android:textColor="#78909C"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7084A4FE"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <!-- Nhập Họ và Tên -->
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Họ và Tên"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <!-- Nhập Tên đăng nhập -->
+    <EditText
+        android:id="@+id/registerUsernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Tên đăng nhập"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <!-- Nhập mật khẩu -->
+    <EditText
+        android:id="@+id/registerPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <!-- Nút Đăng ký -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
+        android:padding="12dp"
+        android:text="Đăng ký"
+        android:textColor="@android:color/white" />
+
+    <!-- Liên kết đến Đăng nhập -->
+    <TextView
+        android:id="@+id/loginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Đã có tài khoản? Đăng nhập tại đây"
+        android:textColor="@android:color/holo_blue_light" />
+
+</LinearLayout>
