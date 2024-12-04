@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.viewmodel.CreationExtras;
 
 public class HomeActivity extends AppCompatActivity {
 	private LinearLayout    btnHome,btnIncome, btnExpense, btnSavings, btnDebt,btnProfile,btnChart;
@@ -22,8 +23,11 @@ public class HomeActivity extends AppCompatActivity {
 
 		String name = getIntent().getStringExtra("name");
 		welcomeTextView = findViewById(R.id.welcomeTextView);
-		welcomeTextView.setText("Xin Chào, " + name + "!");
-
+		if(name!=null){
+			welcomeTextView.setText("Xin Chào, " + name + "!");
+		} else{
+			welcomeTextView.setText("Xin Chào, Nguyễn Trung Kiên!");
+		}
 		// Gắn sự kiện cho từng mục
 		btnIncome   =   findViewById(R.id.btnIncome);
 		btnExpense  =   findViewById(R.id.btnExpense);
@@ -32,13 +36,13 @@ public class HomeActivity extends AppCompatActivity {
 		btnProfile  =   findViewById(R.id.btnProfile);
 		btnChart    =   findViewById(R.id.btnChart);
 		btnHome    =   findViewById(R.id.btnHome);
-		btnHome.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent   =   new Intent(HomeActivity.this,HomeActivity.class);
-				startActivity(intent);
-			}
-		});
+//		btnHome.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent   =   new Intent(HomeActivity.this,HomeActivity.class);
+//				startActivity(intent);
+//			}
+//		});
 		btnChart.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

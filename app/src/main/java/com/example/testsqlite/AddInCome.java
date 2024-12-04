@@ -73,6 +73,7 @@ public class AddInCome extends AppCompatActivity {
 				edtAmount.setText("");
 				Intent intent = new Intent(AddInCome.this, IncomeManagementActivity.class);
 				startActivity(intent);
+				finish();
 				Toast.makeText(getApplicationContext(), "Thêm thành công!", Toast.LENGTH_LONG).show();
 			}
 		});
@@ -108,6 +109,7 @@ public class AddInCome extends AppCompatActivity {
 
 		// Đóng con trỏ để giải phóng tài nguyên
 		cursor.close();
+		finish();
 	}
 	private void updateLabel() {
 		lblDateAndTime.setText(fmtDateAndTime.format(myCalendar.getTime()));

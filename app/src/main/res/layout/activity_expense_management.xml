@@ -9,7 +9,6 @@
 
     <!-- Tiêu đề và nút thêm thu nhập -->
     <LinearLayout
-        android:id="@+id/btnHome"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"

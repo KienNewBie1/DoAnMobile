@@ -109,6 +109,8 @@ public class ExpenseManagementActivity extends AppCompatActivity {
 		} else if (item.getItemId() == R.id.menuDelete) {
 			// Xóa mục
 			deleteItemById(position);
+			Intent intent   =   new Intent(ExpenseManagementActivity.this,ExpenseManagementActivity.class);
+			startActivity(intent);
 			// Cập nhật danh sách hiển thị
 			loadIncomeData();
 			return true;

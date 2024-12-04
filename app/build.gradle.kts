@@ -31,6 +31,7 @@ android {
     }
 }
 dependencies {
+    implementation(libs.facebook.android.sdk)
     implementation(libs.mpandroidchart)
     implementation(libs.core.ktx)
     implementation(libs.appcompat)

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6F84A4FE"
+    android:background="#84A4FE"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
@@ -46,11 +46,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#673AB7"
-        android:padding="12dp"
+        android:padding="16dp"
         android:text="Đăng nhập"
         android:textColor="@android:color/white"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Nút đăng nhập bằng Facebook -->
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btnloginface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="8dp"
+        android:padding="16dp"
+        android:text="Đăng nhập bằng Facebook"
+        android:textColor="@android:color/white"
+        android:textColorLink="#3b5998"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <!-- Liên kết đến trang đăng ký -->
     <TextView
@@ -60,7 +74,5 @@
         android:gravity="center"
         android:paddingTop="10dp"
         android:text="Chưa có tài khoản? Đăng ký tại đây"
-        android:textColor="@android:color/holo_blue_light"
         android:textSize="14sp" />
-
 </LinearLayout>

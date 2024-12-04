@@ -65,7 +65,9 @@ import java.util.Calendar;
 					finish();
 				}
 			});
+
 			loadUserData();
+
 			btnUpdateIncome.setOnClickListener(v -> {
 				String name = edtTitle.getText().toString().trim();
 				String amount = edtAmount.getText().toString().trim();
@@ -75,7 +77,7 @@ import java.util.Calendar;
 					Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
 					return;
 				}
-				// Lấy thông tin hiện tại từ cơ sở dữ liệu (hoặc biến lưu trữ sẵn)
+				// Lấy thông tin hiện tại từ cơ sở dữ liệu
 				Cursor cursor = db.rawQuery("SELECT name, type FROM tblcategories WHERE id = ?",new String[]{ String.valueOf(IncomeManagementActivity.vitriID)});
 				if (cursor.moveToFirst()) {
 					String currentname      = cursor.getString(cursor.getColumnIndexOrThrow("name"));
@@ -97,11 +99,10 @@ import java.util.Calendar;
 				// Cập nhật thông tin nếu có thay đổi
 				updateUser(name, amount);
 				Toast.makeText(this, "Cập nhật thành công!", Toast.LENGTH_SHORT).show();
-
+				finish();
 				// Quay lại màn hình Profile
 				Intent intent = new Intent(this, IncomeManagementActivity.class);
 				startActivity(intent);
-				finish();
 			});
 
 		}

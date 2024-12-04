@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.login.widget.LoginButton;
+
 public class LoginActivity extends AppCompatActivity {
 
 	public static final String COLUMN_ID = "id";
@@ -25,54 +27,11 @@ public class LoginActivity extends AppCompatActivity {
 	public static final String COLUMN_END_DATE = "end_date";
 	public static final String COLUMN_STATUS = "status";
 	public static String UserName="";
-//	private DatabaseHelper db;
-//	private EditText usernameEditText, passwordEditText;
-//	private Button loginButton;
-//	private TextView registerLink;
-//
-//	@Override
-//	protected void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		setContentView(R.layout.activity_login);
-//
-//		db = new DatabaseHelper(this);
-//
-//		usernameEditText = findViewById(R.id.usernameEditText);
-//		passwordEditText = findViewById(R.id.passwordEditText);
-//		loginButton = findViewById(R.id.loginButton);
-//		registerLink = findViewById(R.id.registerLink);
-//
-//		// Xử lý đăng nhập
-//		loginButton.setOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				String username = usernameEditText.getText().toString().trim();
-//				String password = passwordEditText.getText().toString().trim();
-//
-//				if (db.checkUser(username, password)) {
-//					Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-//					Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//					intent.putExtra("username", username);
-//					startActivity(intent);
-//				} else {
-//					Toast.makeText(LoginActivity.this, "Tên đăng nhập hoặc mật khẩu không đúng!", Toast.LENGTH_SHORT).show();
-//				}
-//			}
-//		});
-//
-//		// Chuyển sang trang Đăng ký
-//		registerLink.setOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-//				startActivity(intent);
-//			}
-//		});
-//	}
 
 	public static final String DATABASE_NAME = "SavingsManager.db";
 	SQLiteDatabase db;
 	EditText edtUsername, edtPassword,edtName;
+	LoginButton btnloginface;
 	Button btnLogin;
 	TextView txtCloseLogin;
 
@@ -80,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-
+		btnloginface    = findViewById(R.id.btnloginface);
 		edtUsername     = findViewById(R.id.usernameEditText);
 		edtPassword     = findViewById(R.id.passwordEditText);
 		txtCloseLogin   = findViewById(R.id.registerLink);
@@ -130,6 +89,13 @@ public class LoginActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+				startActivity(intent);
+			}
+		});
+		btnloginface.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(LoginActivity.this,LoginFaceBookActivity.class);
 				startActivity(intent);
 			}
 		});
